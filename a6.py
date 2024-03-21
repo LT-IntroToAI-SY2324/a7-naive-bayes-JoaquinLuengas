@@ -70,6 +70,7 @@ class BayesClassifier:
         # write something like this to track progress (note the `# type: ignore` comment
         # which tells mypy we know better and it shouldn't complain at us on this line):
         for index, filename in enumerate(files, 1): # type: ignore
+            print("--------------------------------------")
             print(f"Training on file {index} of {len(files)}")
             print(filename)
         #     <the rest of your code for updating frequencies here>
