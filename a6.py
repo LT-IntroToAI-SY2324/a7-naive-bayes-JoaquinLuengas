@@ -61,8 +61,8 @@ class BayesClassifier:
         # stored below is how you would load a file with filename given by `fName`
         # `text` here will be the literal text of the file (i.e. what you would see
         # if you opened the file in a text editor
-        fName = files[0]
-        text = self.load_file(os.path.join(self.training_data_directory, fName))
+        # fName = files[0]
+        # text = self.load_file(os.path.join(self.training_data_directory, fName))
 
 
         # *Tip:* training can take a while, to make it more transparent, we can use the
@@ -96,13 +96,15 @@ class BayesClassifier:
         # your life easier here. Write that function first then pass it your list of
         # tokens from the file and the appropriate dictionary
         
-            token = self.tokenize(text)
-            print(token)
+            tokens = self.tokenize(text)
+            print(tokens)
             if filename.startswith(self.pos_file_prefix):
-                self.update_dict(token, self.pos_freqs)
+                self.update_dict(tokens, self.pos_freqs)
 
             elif filename.startswith(self.neg_file_prefix):
-                self.update_dict(token, self.neg_freqs)
+                self.update_dict(tokens, self.neg_freqs)
+
+            # print(len(self.pos_freqs))
 
         # for debugging purposes, it might be useful to print out the tokens and their
         # frequencies for both the positive and negative dictionaries
