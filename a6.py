@@ -139,16 +139,16 @@ class BayesClassifier:
         # we will be adding logs of probabilities, the initial values for the positive
         # and negative probabilities are set to 0
         
-        x_pos = 0
-        y_neg = 0
+        pos_prob = 0
+        neg_prob = 0
 
         # get the sum of all of the frequencies of the features in each document class
         # (i.e. how many words occurred in all documents for the given class) - this
         # will be used in calculating the probability of each document class given each
         # individual feature
-        sum_posfreq = token * x_pos
+        sum_posfreq = token * pos_prob
         print(sum_posfreq)
-        neg_posfreq = token * y_neg
+        neg_posfreq = token * neg_prob
         print(neg_posfreq)
 
         # for each token in the text, calculate the probability of it occurring in a
