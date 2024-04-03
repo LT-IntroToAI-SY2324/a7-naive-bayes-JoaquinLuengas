@@ -160,13 +160,19 @@ class BayesClassifier:
 
         # for debugging purposes, it may help to print the overall positive and negative
         # probabilities
-        
+
+        # print(pos_prob)
+        # print(neg_prob)
 
         # determine whether positive or negative was more probable (i.e. which one was
         # larger)
-        
+        # if pos_prob > neg_prob:
+        #     print("Positive probability is more probable")
+        # elif pos_prob < neg_prob:
+        #     print("Negative probability is more probable")
 
         # return a string of "positive" or "negative"
+        # return pos or neg
 
     def load_file(self, filepath: str) -> str:
         """Loads text of given file
